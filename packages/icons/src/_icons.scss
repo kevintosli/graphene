@@ -5,13 +5,13 @@
 // Font face definition
 @font-face {
   font-family: "GrapheneIconsPro";
-  src: url("fonts/GrapheneIconsPro.ttf?9vmgjg") format("truetype"), url("fonts/GrapheneIconsPro.woff?9vmgjg") format("woff"), url("fonts/GrapheneIconsPro.svg?9vmgjg#GrapheneIconsPro") format("svg");
+  src: url("GrapheneIconsPro.ttf?9vmgjg") format("truetype"), url("GrapheneIconsPro.woff?9vmgjg") format("woff"), url("GrapheneIconsPro.svg?9vmgjg#GrapheneIconsPro") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-$graphene-icons-font-family: "GrapheneIconsPro";
+$gn-icons-font-family: "GrapheneIconsPro";
 
 // Styles
 .grphn-icon {

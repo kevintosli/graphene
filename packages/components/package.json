@@ -1,0 +1,39 @@
+{
+  "name": "@graphene/components",
+  "description": "Vue components for digital and software products using Graphene Design System",
+  "version": "0.1.0",
+  "license": "MPL-2.0",
+  "main": "components.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kevintosli/graphene/packages/components"
+  },
+  "bugs": "https://github.com/kevintosli/graphene/issues/new",
+  "author": {
+    "name": "Kevin Tosli",
+    "email": "kevintosli@icloud.com",
+    "url": "http://kevintosli.github.io/"
+  },
+  "keywords": [
+    "graphene",
+    "components",
+    "vue",
+    "design",
+    "system"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vue-cli-service build --target lib --name graphene-components src/index.js"
+  },
+  "dependencies": {
+    "core-js": "^3.4.4",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^4.1.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "vue-template-compiler": "^2.6.10"
+  }
+}

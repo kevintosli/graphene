@@ -1,0 +1,25 @@
+{
+  "name": "@graphene/icons",
+  "description": "The Graphene icons library is full of retina-friendly, line styled and organic like icons",
+  "version": "1.22.0",
+  "license": "MPL-2.0",
+  "keywords": [
+    "graphene",
+    "icons",
+    "font",
+    "vue"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kevintosli/graphene/packages/icons"
+  },
+  "bugs": "https://github.com/kevintosli/graphene/issues/new",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "Kevin Tosli",
+    "email": "kevintosli@icloud.com",
+    "url": "http://kevintosli.github.io/"
+  }
+}

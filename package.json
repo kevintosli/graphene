@@ -1,7 +1,22 @@
 {
   "name": "graphene",
+  "description": "Graphene is an open-source design system handcrafted by Kevin Tosli",
   "version": "0.1.0",
+  "license": "MPL-2.0",
   "private": true,
+  "publishConfig": {
+    "access": "private"
+  },
+  "author": {
+    "name": "Kevin Tosli",
+    "email": "kevintosli@icloud.com",
+    "url": "http://kevintosli.github.io/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kevintosli/graphene/"
+  },
+  "bugs": "https://github.com/kevintosli/graphene/issues/new",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -18,6 +33,7 @@
     "@vue/cli-plugin-eslint": "^4.1.0",
     "@vue/cli-service": "^4.1.0",
     "@vue/eslint-config-prettier": "^5.0.0",
+    "autoprefixer": "^9.7.4",
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.1",
@@ -25,6 +41,7 @@
     "node-sass": "^4.12.0",
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.0",
+    "vue-svg-loader": "^0.15.0",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
@@ -39,6 +56,11 @@
     "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
     }
   },
   "browserslist": [

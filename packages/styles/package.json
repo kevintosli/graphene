@@ -1,0 +1,28 @@
+{
+  "name": "@graphene/styles",
+  "description": "Graphene DS visual language, easy & handy.",
+  "version": "0.2.0",
+  "license": "MPL-2.0",
+  "keywords": [
+    "graphene",
+    "style",
+    "visual",
+    "layout",
+    "sass",
+    "scss",
+    "css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kevintosli/graphene/packages/styles"
+  },
+  "bugs": "https://github.com/kevintosli/graphene/issues/new",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "Kevin Tosli",
+    "email": "kevintosli@icloud.com",
+    "url": "http://kevintosli.github.io/"
+  }
+}

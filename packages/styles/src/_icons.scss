@@ -2,21 +2,23 @@
 // http://bit.ly/graphenedesign
 // Icons tokens and styles
 
+@import "settings";
+
 // Font face definition
+$gn-icons-font-family: "Graphene Icons Pro";
+
 @font-face {
-  font-family: "GrapheneIconsPro";
-  src: url("GrapheneIconsPro.ttf?9vmgjg") format("truetype"), url("GrapheneIconsPro.woff?9vmgjg") format("woff"), url("GrapheneIconsPro.svg?9vmgjg#GrapheneIconsPro") format("svg");
+  font-family: $gn-icons-font-family;
+  src: url("~@gn-icons/src/GrapheneIconsPro.ttf") format("truetype"), url("~@gn-icons/src/GrapheneIconsPro.woff") format("woff"), url("~@gn-icons/src/GrapheneIconsPro.svg#GrapheneIconsPro") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-$gn-icons-font-family: "GrapheneIconsPro";
-
 // Styles
 .grphn-icon {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "GrapheneIconsPro" !important;
+  font-family: $gn-icons-font-family !important;
   speak: none;
   font-style: normal;
   font-weight: normal;

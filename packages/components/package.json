@@ -3,7 +3,7 @@
   "description": "Vue components for digital and software products using Graphene Design System",
   "version": "0.1.0",
   "license": "MPL-2.0",
-  "main": "components.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/kevintosli/graphene/packages/components"
@@ -25,7 +25,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "vue-cli-service build --target lib --name graphene-components src/index.js"
+    "build": "vue-cli-service build --target lib --name @graphene/components src/index.js"
   },
   "dependencies": {
     "core-js": "^3.4.4",

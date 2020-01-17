@@ -3,6 +3,11 @@
     role="button"
     :class="button_classes"
     :title="kind.match(/icon/) ? value : ''"
+    @click="$emit('click')"
+    @mousedown="$emit('mousedown') && $emit('touchstart')"
+    @mouseup="$emit('mouseup') && $emit('touchend')"
+    @mouseenter="$emit('mouseenter')"
+    @mouseleave="$emit('mouseleave') && $emit('touchcancel')"
   >
     <div v-if="!kind.match(/icon/)" class="flex-col flex-grow-1">
       <div :class="`${graphene_prefix}--btn--value`">{{ value }}</div>

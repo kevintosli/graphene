@@ -6,8 +6,19 @@
 
 // Default imports
 @import "utils";
+@import "settings";
 @import "colors";
 @import "typography";
+@import "variables";
 @import "icons";
+@import "resets";
 
-$prefix: "gn";
+* {
+  box-sizing: border-box;
+}
+
+// CSS variables
+:root {
+  --color--parent-background: #{$color--background};
+  --color--parent-foreground: #{$color--text--primary};
+}

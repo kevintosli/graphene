@@ -1,6 +1,8 @@
-// Graphene Design System
-// http://bit.ly/graphenedesign
-// Layout tokens and styles
+//
+// Copyright Tosli Labs. 2019, 2020.
+// This source code is licensed under the MPL-2.0 license
+// found in the LICENSE file in the root directory of this source tree.
+//
 
 @import "breakpoints";
 @import "typography";
@@ -139,6 +141,25 @@ $pin-directions: (
   t: top
 );
 
+@each $dir, $direction in $pin-directions {
+  %pin-#{$dir} {
+    #{$direction}: 0;
+  }
+}
+%pin-x {
+  left: 0;
+  right: 0;
+}
+%pin-y {
+  bottom: 0;
+  top: 0;
+}
+%pin-a {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
 .pin {
   @each $dir, $direction in $pin-directions {
     &-#{$dir} {

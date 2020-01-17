@@ -1,31 +1,26 @@
-// Graphene Design System
-// http://bit.ly/graphenedesign
-// Browser's default stylings reset
+//
+// Copyright Tosli Labs. 2019, 2020.
+// This source code is licensed under the MPL-2.0 license
+// found in the LICENSE file in the root directory of this source tree.
+//
+@import "settings";
 
-body {
+%reset--body {
   font-size: 100%;
   margin: 0;
   padding: 0;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+%reset--headings {
   font-size: inherit;
   font-weight: inherit;
   margin: 0;
   padding: 0;
 }
-
-p {
+%reset--paragraphs {
   margin: 0;
   padding: 0;
 }
-
-a {
+%reset--links {
   text-decoration: none;
 
   &:link,
@@ -33,11 +28,7 @@ a {
     color: inherit;
   }
 }
-
-input,
-textarea,
-select,
-button {
+%reset--inputs {
   appearance: none;
   background: none;
   border: none;
@@ -57,9 +48,7 @@ button {
     -webkit-text-fill-color: inherit !important;
   }
 }
-
-ol,
-ul {
+%reset--unordered-ordered-lists {
   margin: 0;
   padding: 0;
 
@@ -67,11 +56,92 @@ ul {
     padding: 0;
   }
 }
-ul {
+%reset--ul {
   list-style: none;
 }
-
-hr {
+%reset--hr {
   border: none;
   margin: 0;
+}
+
+body[#{$reset--name}] {
+  @extend %reset--body;
+}
+
+h1[#{$reset--name}],
+h2[#{$reset--name}],
+h3[#{$reset--name}],
+h4[#{$reset--name}],
+h5[#{$reset--name}],
+h6[#{$reset--name}] {
+  @extend %reset--headings;
+}
+
+p[#{$reset--name}] {
+  @extend %reset--paragraphs;
+}
+
+a[#{$reset--name}] {
+  @extend %reset--links;
+}
+
+input[#{$reset--name}],
+textarea[#{$reset--name}],
+select[#{$reset--name}],
+button[#{$reset--name}] {
+  @extend %reset--inputs;
+}
+
+ol[#{$reset--name}],
+ul[#{$reset--name}] {
+  @extend %reset--unordered-ordered-lists;
+}
+ul[#{$reset--name}] {
+  @extend %reset--ul;
+}
+
+hr[#{$reset--name}] {
+  @extend %reset--hr;
+}
+
+// Global CSS reset
+
+body[#{$reset-all--name}] {
+  @extend %reset--body;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @extend %reset--headings;
+  }
+
+  p {
+    @extend %reset--paragraphs;
+  }
+
+  a {
+    @extend %reset--links;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    @extend %reset--inputs;
+  }
+
+  ol,
+  ul {
+    @extend %reset--unordered-ordered-lists;
+  }
+  ul {
+    @extend %reset--ul;
+  }
+
+  hr {
+    @extend %reset--hr;
+  }
 }

@@ -1,3 +1,9 @@
-// @import "@gn-styles/src/resets";
 @import "@gn-styles/src/base";
 @import "@gn-styles/src/layout";
+
+body {
+  background-color: var(--color--background);
+  color: var(--color--foreground);
+  font-family: $gn--font--family;
+  @include gn--font--style--paragraph();
+}

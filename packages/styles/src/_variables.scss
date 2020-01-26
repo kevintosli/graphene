@@ -4,6 +4,7 @@ $color--reject: $gn--color--redish-400 !default;
 
 $color--text--primary: $gn--color--black-600 !default;
 $color--text--secondary: $gn--color--black-500 !default;
+$color--text--disabled: $gn--color--black-300 !default;
 
 $color--border: $gn--color--black-200 !default;
 
@@ -21,5 +22,7 @@ $duration--slow: 400ms;
 // Component specific
 $button--primary--color: $color--accent !default;
 $button--standard--color: $gn--color--gray-300 !default;
+$button--disabled--color: $gn--color--gray-200 !default;
+$button--text--color: $gn--color--white-200 !default;
 $button--focus-ring--color: $color--accent !default;
 $button--focus-ring--width: #{rem(3px)} !default;

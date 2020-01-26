@@ -4,9 +4,9 @@
       value="Know more"
       description="Get our newsletter"
       icon="chevron_right"
-      kind="standard"
-      size="touch"
-      @click="console.log('clicou')"
+      kind="primary"
+      size="field"
+      @click="test"
     />
     <button>Botão comum</button>
   </div>
@@ -14,6 +14,18 @@
 
 <script>
 export default {
-  name: "home"
+  name: "home",
+  methods: {
+    test() {
+      alert("Is working");
+    }
+  }
 };
 </script>
+
+<style lang="scss">
+.home {
+  // --color--parent-background: black;
+  // background: var(--color--parent-background);
+}
+</style>

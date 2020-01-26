@@ -3,11 +3,8 @@
     role="button"
     :class="button_classes"
     :title="kind.match(/icon/) ? value : ''"
-    @click="$emit('click')"
-    @mousedown="$emit('mousedown') && $emit('touchstart')"
-    @mouseup="$emit('mouseup') && $emit('touchend')"
-    @mouseenter="$emit('mouseenter')"
-    @mouseleave="$emit('mouseleave') && $emit('touchcancel')"
+    :disabled="disabled"
+    v-on="listeners"
   >
     <div v-if="!kind.match(/icon/)" class="flex-col flex-grow-1">
       <div :class="`${graphene_prefix}--btn--value`">{{ value }}</div>
@@ -26,10 +23,7 @@ import { settings } from "@gn-components/src/settings.js";
 export default {
   name: "GnButton",
   props: {
-    value: {
-      type: String,
-      required: false
-    },
+    value: String,
     description: String,
     icon: String,
     kind: {
@@ -45,6 +39,10 @@ export default {
       validator: value => {
         return value.match(/touch|field/);
       }
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -58,7 +56,7 @@ export default {
         `${this.graphene_prefix}--btn--${this.size.toLowerCase()}`
       ];
 
-      if (this.description) {
+      if (this.description && !this.kind.match(/icon/)) {
         classes.push("__description");
       }
 
@@ -76,6 +74,7 @@ export default {
         touchleave: this.$emit("touchleave"),
         mousedown: this.$emit("mousedown"),
         mouseup: this.$emit("mouseup"),
+        mouseenter: this.$emit("mouseenter"),
         mouseleave: this.$emit("mouseleave")
       });
     }
@@ -150,9 +149,9 @@ export default {
   &--primary {
     background-color: $button--primary--color;
     box-shadow: inset 0 rem(-1px) 0 $color--border;
-    color: var(--color--parent-background);
+    color: $button--text--color;
 
-    &:hover:active {
+    &:not(:disabled):hover:active {
       background-color: darken($button--primary--color, 8);
     }
   }
@@ -168,7 +167,7 @@ export default {
     background-color: $button--standard--color;
     color: $color--text--primary;
 
-    &:hover:active {
+    &:not(:disabled):hover:active {
       background-color: darken($button--standard--color, 6);
     }
   }
@@ -188,6 +187,12 @@ export default {
     .#{$prefix}--btn--focus-ring {
       border-radius: $border--radius--circular;
     }
+  }
+
+  &:disabled {
+    background: $button--disabled--color;
+    color: $color--text--disabled;
+    cursor: not-allowed;
   }
 }
 </style>

@@ -19,6 +19,16 @@
 
 <script>
 import { settings } from "@gn-components/src/settings.js";
+const events = [
+  "click",
+  "touchstart",
+  "touchend",
+  "touchleave",
+  "mousedown",
+  "mouseup",
+  "mouseenter",
+  "mouseleave"
+];
 
 export default {
   name: "GnButton",
@@ -67,16 +77,14 @@ export default {
       return classes;
     },
     listeners() {
-      return Object.assign({}, this.$listeners, {
-        click: this.$emit("click"),
-        touchstart: this.$emit("touchstart"),
-        touchend: this.$emit("touchend"),
-        touchleave: this.$emit("touchleave"),
-        mousedown: this.$emit("mousedown"),
-        mouseup: this.$emit("mouseup"),
-        mouseenter: this.$emit("mouseenter"),
-        mouseleave: this.$emit("mouseleave")
+      const eachWay = {};
+      events.forEach(event => {
+        eachWay[event] = e => this.$emit(event, e);
       });
+      return {
+        ...this.$listeners,
+        ...eachWay
+      };
     }
   }
 };

@@ -1,10 +1,22 @@
 <template>
-  <div id="app">
-    This is Graphene app
+  <application>
+    Welcome to Graphene website!
     <router-view />
-  </div>
+  </application>
 </template>
+
+<script>
+import Vue from "vue";
+
+Vue.config.ignoredElements.push("application");
+
+export default {};
+</script>
 
 <style lang="scss">
 @import "@scss/global";
+
+application {
+  display: block;
+}
 </style>

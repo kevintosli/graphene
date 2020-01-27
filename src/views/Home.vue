@@ -6,7 +6,6 @@
       icon="chevron_right"
       kind="primary"
       size="field"
-      @click="test"
     />
     <button>Botão comum</button>
   </div>
@@ -15,11 +14,7 @@
 <script>
 export default {
   name: "home",
-  methods: {
-    test() {
-      alert("Is working");
-    }
-  }
+  methods: {}
 };
 </script>
 

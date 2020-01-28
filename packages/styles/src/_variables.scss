@@ -1,0 +1,34 @@
+$color--background: $gn--color--white-200 !default;
+$color--accent: $gn--color--blue-400 !default;
+$color--success: $gn--color--green-400 !default;
+$color--warning: $gn--color--yellow-500 !default;
+$color--error: $gn--color--redish-400 !default;
+
+$color--text--primary: $gn--color--black-600 !default;
+$color--text--secondary: $gn--color--black-400 !default;
+$color--text--disabled: $gn--color--black-300 !default;
+
+$color--border: $gn--color--black-200 !default;
+
+$color--shadow-200: $gn--color--black-300 !default;
+$color--shadow-400: $gn--color--black-500 !default;
+
+$border--radius--regular: #{rem(2px)} !default;
+$border--radius--circular: #{rem(999px)} !default;
+
+$duration--instant: 60ms;
+$duration--fast: 120ms;
+$duration--regular: 260ms;
+$duration--slow: 400ms;
+
+// Component specific
+$button--primary--color: $color--accent !default;
+$button--standard--color: $gn--color--gray-300 !default;
+$button--disabled--color: $gn--color--gray-200 !default;
+$button--text--color: $gn--color--white-200 !default;
+$button--focus-ring--color: $color--accent !default;
+$button--focus-ring--width: #{rem(3px)} !default;
+
+$toggle--border--color: $color--text--secondary !default;
+$toggle--unchecked--color: $color--text--primary !default;
+$toggle--checked--color: $color--success !default;

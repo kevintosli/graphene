@@ -4,7 +4,11 @@
 //   found in the LICENSE file in the root directory of this source tree.
 //
 
-const ctx = require.context("./src/components/", true, /^(?!.*(?:\/_|-story\.vue|-test\.vue)).*\.vue$/);
+const ctx = require.context(
+  "./src/components/",
+  true,
+  /^(?!.*(?:\/_|-story\.vue|-test\.vue)).*\.vue$/
+);
 const components = ctx.keys().map(ctx);
 
 // Export the components as a plugin
